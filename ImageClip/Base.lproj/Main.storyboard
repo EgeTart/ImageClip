@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageClip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I17-es-w7r">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="HjG-iK-Yja"/>
+                                    <constraint firstAttribute="width" constant="240" id="mRG-q7-M7X"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HjG-iK-Yja"/>
+                                        <exclude reference="mRG-q7-M7X"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="HjG-iK-Yja"/>
+                                        <include reference="mRG-q7-M7X"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGE-O4-uVA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.58823529409999997" green="0.46274509800000002" blue="0.83921568629999999" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="INK-kF-MWy"/>
+                                    <constraint firstAttribute="width" constant="119" id="Id4-dO-qJh"/>
+                                </constraints>
+                                <state key="normal" title="GetImage">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="INK-kF-MWy"/>
+                                        <exclude reference="Id4-dO-qJh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="INK-kF-MWy"/>
+                                        <include reference="Id4-dO-qJh"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="getImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VgM-bR-fy8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vGE-O4-uVA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0F3-AE-bdt"/>
+                            <constraint firstItem="I17-es-w7r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DCF-dD-sDm"/>
+                            <constraint firstItem="I17-es-w7r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="LjC-4K-LHp"/>
+                            <constraint firstItem="vGE-O4-uVA" firstAttribute="top" secondItem="I17-es-w7r" secondAttribute="bottom" constant="21" id="V77-9P-qPe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="I17-es-w7r"/>
+                                <exclude reference="vGE-O4-uVA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="DCF-dD-sDm"/>
+                                <exclude reference="LjC-4K-LHp"/>
+                                <exclude reference="0F3-AE-bdt"/>
+                                <exclude reference="V77-9P-qPe"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="I17-es-w7r"/>
+                                <include reference="vGE-O4-uVA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="DCF-dD-sDm"/>
+                                <include reference="LjC-4K-LHp"/>
+                                <include reference="0F3-AE-bdt"/>
+                                <include reference="V77-9P-qPe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="I17-es-w7r" id="DL6-RR-MR5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="187.5"/>
+        </scene>
+    </scenes>
+</document>
